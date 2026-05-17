@@ -1,5 +1,7 @@
 # BNC Framework Validator Bot
 
+**Live App:** [https://bnc-framework-validator-bot.onrender.com/](https://bnc-framework-validator-bot.onrender.com/)
+
 Framework Validator Bot is an AI-powered assistant designed for management consulting aspirants to practice their case interviewing frameworks. It uses Google's **Gemini AI** to evaluate user-submitted frameworks against specific case rubrics, providing instant feedback, MECE (Mutually Exclusive, Collectively Exhaustive) checks, and letter grades.
 
 ## Features
@@ -19,41 +21,6 @@ Framework Validator Bot is an AI-powered assistant designed for management consu
 - **Database/Auth**: Firebase Firestore & Firebase Authentication
 - **Icons**: Lucide React
 - **Build Tool**: Vite
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js installed
-- A [Google AI Studio API Key](https://aistudio.google.com/app/apikey)
-- A Firebase Project (for Auth and Firestore)
-
-### Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone <your-repo-url>
-   cd bnc-framework-validator-bot
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Environment Setup:**
-   Create a `.env` file in the root and add your Gemini API Key:
-   ```env
-   GEMINI_API_KEY=your_gemini_api_key_here
-   ```
-
-4. **Firebase Configuration:**
-   Download your Firebase web config and place it in the root as `firebase-applet-config.json` or update `src/firebase.ts` with your credentials.
-
-5. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
 
 ## Customizing Cases
 
