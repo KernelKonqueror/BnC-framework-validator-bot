@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { GoogleAuthProvider, signInWithPopup, onAuthStateChanged, User } from 'firebase/auth';
+import { GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged, User } from 'firebase/auth';
 import { collection, query, where, orderBy, getDocs, setDoc, doc, serverTimestamp, Timestamp } from 'firebase/firestore';
-import { Loader2, LogIn, Send, Trophy, History, BrainCircuit, Sun, Moon } from 'lucide-react';
+import { Loader2, LogIn, LogOut, Send, Trophy, History, BrainCircuit, Sun, Moon } from 'lucide-react';
 import { auth, db, handleFirestoreError, OperationType } from './firebase';
 
 import casesData from './data/cases.json';
@@ -96,6 +96,14 @@ export default function App() {
       await signInWithPopup(auth, provider);
     } catch (error) {
       console.error("Sign in failed", error);
+    }
+  };
+
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      console.error("Sign out failed", error);
     }
   };
 
@@ -199,6 +207,14 @@ export default function App() {
                  <div className={`text-sm font-medium flex items-center gap-3 ${theme === 'dark' ? 'text-neutral-400' : 'text-neutral-500'}`}>
                    <img src={user.photoURL || undefined} alt="avatar" className={`w-8 h-8 rounded-full border ${theme === 'dark' ? 'border-neutral-700' : 'border-neutral-200'}`} />
                    <span className="hidden sm:inline">{user.displayName || user.email}</span>
+                   <button 
+                     onClick={handleSignOut}
+                     className={`p-1.5 rounded-md transition-colors ${theme === 'dark' ? 'hover:bg-neutral-800 text-neutral-400 hover:text-red-400' : 'hover:bg-neutral-200 text-neutral-600 hover:text-red-600'}`}
+                     aria-label="Sign out"
+                     title="Sign out"
+                   >
+                     <LogOut size={16} />
+                   </button>
                  </div>
               ) : null}
             </div>
