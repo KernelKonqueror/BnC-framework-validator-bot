@@ -1,0 +1,14 @@
+[
+  {
+    "text": "A major airline is seeing a 20% drop in profits over the last year despite stable revenues. What is causing the profit decline?",
+    "rubric": "Strict Requirement: Since revenue is stable, the framework MUST focus entirely on Costs. Key buckets needed: Fixed Costs (labor, aircraft leases, fuel hedges) and Variable Costs (fuel, maintenance, landing fees). If they include a 'Revenue' bucket, mark them down."
+  },
+  {
+    "text": "A top-tier cosmetics manufacturer wants to enter the men's grooming market. Should they?",
+    "rubric": "Key buckets: 1. Market Attractiveness (size, growth, trends). 2. Competitive Landscape (current players, market share). 3. Company Capabilities (brand translation, distribution channels). 4. Financials (expected ROI, costs to enter)."
+  },
+  {
+    "text": "A private equity firm is considering acquiring a regional chain of coffee shops. The chain has been growing quickly but margins are tightening. Is this a good investment?",
+    "rubric": "Key buckets: 1. The Target (why are margins tightening? Costs vs Pricing power). 2. The Market (coffee shop saturation, consumer trends). 3. The PE Firm (investment timeline, expected synergies, exit strategy). 4. Valuation & ROI."
+  }
+]

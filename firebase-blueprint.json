@@ -1,0 +1,25 @@
+{
+  "entities": {
+    "Attempt": {
+      "title": "Attempt",
+      "description": "A user's case framework submission",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "caseText": { "type": "string" },
+        "framework": { "type": "string" },
+        "missingBucket": { "type": "string" },
+        "grade": { "type": "string", "enum": ["S", "A", "B", "C"] },
+        "feedback": { "type": "string" },
+        "createdAt": { "type": "integer", "description": "Timestamp" }
+      },
+      "required": ["userId", "caseText", "framework", "missingBucket", "grade", "feedback", "createdAt"]
+    }
+  },
+  "firestore": {
+    "users/{userId}/attempts/{attemptId}": {
+      "schema": { "$ref": "#/entities/Attempt" },
+      "description": "User's framework generation attempts"
+    }
+  }
+}
